@@ -4,8 +4,8 @@ const auth = require("../middlewares/auth");
 
 const {
   loginUser,
-  create,
   currentUser,
+  register,
 } = require("../controllers/AuthController");
 
 // @route   GET api/auth
@@ -15,12 +15,12 @@ router.post("/login", loginUser);
 
 // @route   GET api/auth/logged-in
 // @desc    Get Logged In User
-// @access  Public
-router.get("/current-user", auth, currentUser);
+// @access  Private
+router.get("/me", auth, currentUser);
 
 // @route   POST api/auth
 // @desc    Register
 // @access  Public
-router.post("/register", create);
+router.post("/register", register);
 
 module.exports = router;

@@ -20,7 +20,7 @@ app.get("/", (req, res) => res.send("Wazobia Test API..."));
 
 // Define routes
 app.use("/api/auth", require("./routes/auth"));
-// app.use("/api/items", require("./routes/api/items"));
+app.use("/api/items", require("./routes/item"));
 
 const PORT = process.env.PORT || 5001;
 

@@ -75,7 +75,7 @@ exports.loginUser = async (req, res) => {
   }
 };
 
-exports.create = async (req, res) => {
+exports.register = async (req, res) => {
   let { firstName, lastName, email, password } = req.body;
 
   // check if user exists
